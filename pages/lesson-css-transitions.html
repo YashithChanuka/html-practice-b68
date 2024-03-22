@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson - CSS Transitions</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 200px auto;
+        /* for one property */
+        /* transition-property: width; */
+
+        /* all transting elements */
+        transition-property: all;
+        transition-duration: 3s;
+        transition-timing-function: ease;
+        transition-delay: 1s;
+
+        /* you can do the same thing as above using this single line */
+        transition: all 3s ease 2s;
+      }
+
+      .box:hover {
+        width: 200px;
+        height: 300px;
+        background-color: blue;
+      }
+
+      p {
+        transition: all 3s linear;
+      }
+
+      p:hover {
+        color: red;
+        font-style: italic;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello World!!!</p>
+    <div class="box"></div>
+  </body>
+</html>

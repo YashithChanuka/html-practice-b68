@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson - CSS Animation</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        top: 100px;
+        left: 100px;
+        /* animation-name: square;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 2s; */
+
+        /* animation: square 10s linear infinite; */
+        animation: up-down 3s linear infinite;
+      }
+
+      @keyframes up-down {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-32px);
+        }
+        100% {
+          transform: translateY(32px);
+        }
+      }
+
+      @keyframes square {
+        /* from {
+          background-color: red;
+        }
+        to {
+          background-color: green;
+        } */
+
+        0% {
+          background-color: red;
+          top: 100px;
+          left: 100px;
+        }
+
+        25% {
+          background-color: aqua;
+          top: 100px;
+          left: 500px;
+          border-radius: 12px;
+          transform: scale(1);
+        }
+
+        50% {
+          background-color: green;
+          top: 500px;
+          left: 500px;
+          border-radius: 16px;
+          transform: scale(2);
+        }
+
+        75% {
+          background-color: purple;
+          top: 500px;
+          left: 100px;
+          border-radius: 48px;
+          transform: scale(3);
+        }
+
+        100% {
+          background-color: blue;
+          top: 100px;
+          left: 100px;
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
