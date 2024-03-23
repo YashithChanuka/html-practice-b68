@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson - Media Queries 02</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 8px;
+      }
+      .card {
+        border: 1px solid black;
+        box-shadow: 3px 3px 3px grey;
+        padding: 12px;
+        background-color: wheat;
+        border-radius: 12px;
+      }
+      .reviewer-image {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .rating-star {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      .card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      p {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+
+      /* 0 - 575 => 1 card */
+      @media screen and (max-width: 575px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /* 576 - 767 => 2 cards */
+      @media screen and (min-width: 576px) and (max-width: 767px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 768 - 991 => 3 cards */
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* 992 - 1199 => 4 cards */
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        .container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      /* 1200 - 1399 => 5 cards */
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        .container {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+      .scrollable-review {
+        max-height: 150px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Reviews Corner</h1>
+    <div class="container">
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="scrollable-review">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ipsum sed provident maiores eligendi magnam tempora excepturi
+              praesentium, nulla sint!
+              <br />
+              <br />
+              <span style="float: right">- Yashith Chanuka</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            ipsum sed provident maiores eligendi magnam tempora excepturi
+            praesentium, nulla sint!
+            <br />
+            <br />
+            <span style="float: right">- Yashith Chanuka</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            ipsum sed provident maiores eligendi magnam tempora excepturi
+            praesentium, nulla sint!
+            <br />
+            <br />
+            <span style="float: right">- Yashith Chanuka</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            ipsum sed provident maiores eligendi magnam tempora excepturi
+            praesentium, nulla sint!
+            <br />
+            <br />
+            <span style="float: right">- Yashith Chanuka</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            ipsum sed provident maiores eligendi magnam tempora excepturi
+            praesentium, nulla sint!
+            <br />
+            <br />
+            <span style="float: right">- Yashith Chanuka</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img
+            class="reviewer-image"
+            src="/assets/prof_img.jpeg"
+            alt="reviewer-image"
+          />
+          <div>
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMzQucG5n.png"
+              alt="review-start"
+              class="rating-star"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            ipsum sed provident maiores eligendi magnam tempora excepturi
+            praesentium, nulla sint!
+            <br />
+            <br />
+            <span style="float: right">- Yashith Chanuka</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
